@@ -1,0 +1,33 @@
+# Private original research/material: never publish this tree.
+/NativeRebirth/
+/investigation/
+/*.iso
+/*.dmg
+/*.zip
+# Builds and local/editor state.
+**/.build/
+**/dist/
+**/.swiftpm/
+**/.DS_Store
+.DS_Store
+*.log
+*.xcuserstate
+.env
+.env.*
+# No original executables, archives, recordings, ROM dumps or extraction tables.
+*.dll
+*.exe
+*.rbm
+*.rbs
+*.dat
+*.aif
+*.aiff
+*.wav
+*.f32
+*.i16
+*Recovered303*
+*Original303Coefficients*
+*OriginalWaveshaper*
+*OriginalPCFCoefficients*
+EffectTables.inc
+DrumTables.inc

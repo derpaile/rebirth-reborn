@@ -1,4 +1,6 @@
-# Rebirth Reborn
+# Reborn²
+
+<img src="Reborn/Assets/AppIcon.png" width="96" alt="Reborn² app icon">
 
 Native macOS-Sequencer nach dem Vorbild von ReBirth, mit zwei Basssynthesizern, zwei Drum-Maschinen und kompakter Rack-Oberfläche.
 
@@ -6,7 +8,7 @@ Native macOS-Sequencer nach dem Vorbild von ReBirth, mit zwei Basssynthesizern, 
 
 Früher Entwicklungsstand mit eigener Klangerzeugung und in Code gezeichneter Oberfläche. Alle eingebauten Drum-Klänge und Filterpatterns werden vom Projekt erzeugt. Originalprogramme, Samples, Songs, Skins und extrahierte Klangtabellen sind nicht enthalten. Samplegenaue Gleichheit mit dem Original wird nicht behauptet.
 
-[English](README.md) · [Fehler melden](https://github.com/derpaile/rebirth-reborn/issues)
+[English](README.md) · [Fehler melden](https://github.com/derpaile/reborn-squared/issues)
 
 ![Native Rack-Oberfläche](docs/assets/rack.png)
 
@@ -32,15 +34,15 @@ Voraussetzung: Apple-Silicon-Mac mit macOS 13 oder neuer und Apple Command Line 
 ```sh
 xcode-select --install  # falls die Command Line Tools noch fehlen
 
-git clone https://github.com/derpaile/rebirth-reborn.git
-cd rebirth-reborn
-bash RebirthReborn/build-app.sh
-open "RebirthReborn/dist/Rebirth Reborn.app"
+git clone https://github.com/derpaile/reborn-squared.git
+cd reborn-squared
+bash Reborn/build-app.sh
+open "Reborn/dist/Reborn².app"
 ```
 
-Das Skript baut und prüft die App, verpackt sie in `RebirthReborn/dist/` und signiert sie lokal. Die App ist nicht notarisiert. Die fertige App läuft offline und benötigt keine Entwicklerwerkzeuge.
+Das Skript baut und prüft die App, erzeugt das macOS-Icon in 16–1024 Pixeln, verpackt sie in `Reborn/dist/` und signiert sie lokal. Die App ist nicht notarisiert. Die fertige App läuft offline und benötigt keine Entwicklerwerkzeuge.
 
-Der [macOS-Bau auf GitHub](https://github.com/derpaile/rebirth-reborn/actions/workflows/build.yml) führt dieselben Prüfungen aus und stellt die verpackte App als Bauartefakt bereit.
+Der [macOS-Bau auf GitHub](https://github.com/derpaile/reborn-squared/actions/workflows/build.yml) führt dieselben Prüfungen aus und stellt die verpackte App als Bauartefakt bereit.
 
 ## Bedienung
 
@@ -63,8 +65,10 @@ Das Rack hält die logischen 592 × 510 Proportionen. Flächen werden mit vierfa
 Native JSON-Sessions behalten alle Einstellungen, aufgezeichnete MIDI-Noten und eigene eingebettete Soundpacks. Die Preset-Bibliothek liegt unter:
 
 ```text
-~/Library/Application Support/Rebirth Reborn Community/Presets/library.json
+~/Library/Application Support/RebornSquared/Presets/library.json
 ```
+
+Vorhandene Presets aus Rebirth Reborn werden beim ersten Start übernommen; die bisherige Bibliothek bleibt erhalten. MIDI-Zuweisungen und Fenstereinstellungen bleiben erhalten.
 
 Werk-Presets sind geschützt; zum Bearbeiten eine Kopie sichern. Bass-Presets können beide Bassstimmen bedienen, Drumkits unterscheiden die beiden Drum-Maschinen. Die Samplebank eines Soundpacks gilt für das ganze Rack.
 
@@ -93,14 +97,14 @@ Beim Bau werden die erzeugten Samples, alle 22 Drum-Stimmen, Bassregler und Over
 Zusätzliche App-Prüfläufe einzeln starten:
 
 ```sh
-"RebirthReborn/dist/Rebirth Reborn.app/Contents/MacOS/Rebirth" --feature-check
-"RebirthReborn/dist/Rebirth Reborn.app/Contents/MacOS/Rebirth" --ui-check
+"Reborn/dist/Reborn².app/Contents/MacOS/Reborn" --feature-check
+"Reborn/dist/Reborn².app/Contents/MacOS/Reborn" --ui-check
 ```
 
-Die Testinstanz beendet sich anschließend. Die Fensterprüfung erzeugt außerdem `/tmp/rebirth-reborn-ui-check.png`.
+Die Testinstanz beendet sich anschließend. Die Fensterprüfung erzeugt außerdem `/tmp/reborn-squared-ui-check.png`.
 
 ## Mitarbeit und Lizenz
 
 Hinweise für Beiträge und Fehlerberichte: [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Code und Projektgrafiken: [MIT](LICENSE). Importierte Klänge und Skins behalten ihre eigenen Lizenzen. Inoffizielles Projekt ohne Verbindung zu den Herstellern von ReBirth, TB-303, TR-808 oder TR-909.
+Code und Projektgrafiken: [MIT](LICENSE). Das neue [App-Icon samt Prompt](docs/icon.md) ist dokumentiert. Importierte Klänge und Skins behalten ihre eigenen Lizenzen. Inoffizielles Projekt ohne Verbindung zu den Herstellern von ReBirth, TB-303, TR-808 oder TR-909.

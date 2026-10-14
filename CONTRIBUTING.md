@@ -1,6 +1,6 @@
 # Contributing
 
-Build with `bash RebirthReborn/build-app.sh` on an Apple Silicon Mac. Keep changes focused and describe their effect on sound, timing or controls.
+Build with `bash Reborn/build-app.sh` on an Apple Silicon Mac. Keep changes focused and describe their effect on sound, timing or controls.
 
 Before opening a pull request:
 
@@ -12,6 +12,6 @@ Before opening a pull request:
 
 For bugs, include macOS version, Mac architecture, the smallest reproduction and the result you expected. A screenshot helps with layout; a self-created native session helps with sequencing. Keep personal paths and original application material out of attachments.
 
-Native source is organized into `RebirthApp` (interface/MIDI), `RebirthModel` (sessions, generated sounds, files) and `RebirthDSP` (audio). Pattern clocks use 192 ticks per quarter note: 48 ticks per sixteenth, 768 per 4/4 bar.
+Native source is organized into `RebornApp` (interface/MIDI), `RebornModel` (sessions, generated sounds, files) and `RebornDSP` (audio). Pattern clocks use 192 ticks per quarter note: 48 ticks per sixteenth, 768 per 4/4 bar.
 
 The soundpack format is documented in [docs/soundpacks.md](docs/soundpacks.md). User-created soundpacks are separate from the project's MIT source license.

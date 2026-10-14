@@ -14,11 +14,11 @@ jobs:
       - name: Audit publication boundary
         run: python3 scripts/audit-public.py
       - name: Build and check asset-free app
-        run: bash RebirthReborn/build-app.sh
+        run: bash Reborn/build-app.sh
       - name: Package app
-        run: ditto -c -k --sequesterRsrc --keepParent "RebirthReborn/dist/Rebirth Reborn.app" /tmp/Rebirth-Reborn-macOS-arm64.zip
+        run: ditto -c -k --sequesterRsrc --keepParent "Reborn/dist/Reborn².app" /tmp/Reborn-Squared-macOS-arm64.zip
       - name: Upload native build
         uses: actions/upload-artifact@v7
         with:
-          name: Rebirth-Reborn-macOS-arm64
-          path: /tmp/Rebirth-Reborn-macOS-arm64.zip
+          name: Reborn-Squared-macOS-arm64
+          path: /tmp/Reborn-Squared-macOS-arm64.zip

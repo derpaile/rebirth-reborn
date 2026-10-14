@@ -1,6 +1,6 @@
-# Keep it small. Keep it musical.
+# Contributing
 
-Build with `bash RebirthReborn/build-app.sh` on an Apple Silicon Mac. Start with a small change you can hear or feel: a control response, a synthesized voice, a timing fix, a clearer interaction.
+Build with `bash RebirthReborn/build-app.sh` on an Apple Silicon Mac. Keep changes focused and describe their effect on sound, timing or controls.
 
 Before opening a pull request:
 
